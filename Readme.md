@@ -20,3 +20,6 @@ Emad Mokhatab ([freemad](https://github.com/freeemad))
 The API documents can be accessed from:
 http://localhost:8080/swagger-ui/index.html
 
+P.S.: The API sample by the Postman is also available in:
+"BluBank-DoctorAppointment.postman_collection.json"
+at the root directory of the project.
