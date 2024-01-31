@@ -1,0 +1,38 @@
+com:
+    blubank:
+        doctorappointment:
+            doctor-name: ${DOCTOR_NAME:"Dr. WHO"}
+            appointment-interval: ${APPOINTMENT_INTERVAL:30} #in minutes
+
+springdoc:
+    version: 0.0.1
+
+logging:
+    level:
+        root: INFO
+management:
+    endpoint:
+        health:
+            show-details: always
+    endpoints:
+        web:
+            exposure:
+                include: '*'
+    health:
+        redis:
+            enabled: false
+spring:
+    boot:
+        admin:
+            client:
+                url: http://localhost:8080
+            routes:
+                endpoints: env, metrics, trace, jolokia, info, configprops
+    datasource:
+        url: jdbc:h2:mem:doctor_appointment;MODE=Oracle
+    h2:
+        console:
+            enabled: true
+    jpa:
+        hibernate:
+            ddl-auto: update

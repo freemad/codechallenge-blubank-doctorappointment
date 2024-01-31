@@ -1,0 +1,13 @@
+{
+  "properties": [
+    {
+      "name": "com.blubank.doctorappointment.doctor-name",
+      "type": "java.lang.String",
+      "description": "Description for com.blubank.doctorappointment.doctor-name."
+    },
+    {
+      "name": "com.blubank.doctorappointment.appointment-interval",
+      "type": "java.lang.String",
+      "description": "Description for com.blubank.doctorappointment.appointment-interval."
+    }
+  ] }

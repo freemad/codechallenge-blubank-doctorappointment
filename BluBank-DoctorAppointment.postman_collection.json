@@ -1,0 +1,913 @@
+{
+	"info": {
+		"_postman_id": "f28a74d0-b225-4903-9f2f-3f31805ec5eb",
+		"name": "BluBank-DoctorAppointment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "6502748"
+	},
+	"item": [
+		{
+			"name": "Patient",
+			"item": [
+				{
+					"name": "create patient",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Mrs. Akh Injaam\",\n    \"mobileno\": \"+989123456789\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/patients/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"patients",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "create patient",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Mrs. Akh Injaam\",\n    \"mobileno\": \"+989123456789\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/v1/patients/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"patients",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 31 Jan 2024 12:27:01 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"d77fdad4-3ec6-41f9-9296-c06c5c158fc9\",\n    \"name\": \"Mrs. Akh Injaam\",\n    \"mobileno\": \"+989123456789\"\n}"
+						}
+					]
+				},
+				{
+					"name": "get patient by mobile",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/patients/mobile/+989123456789/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"patients",
+								"mobile",
+								"+989123456789",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get patient by mobile",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/v1/patients/mobile/+989123456789/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"patients",
+										"mobile",
+										"+989123456789",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 31 Jan 2024 12:28:17 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"985ea836-44d5-4e00-828c-bb27059f286d\",\n    \"name\": \"Mrs. Akh Injaam\",\n    \"mobileno\": \"+989123456789\"\n}"
+						}
+					]
+				},
+				{
+					"name": "get all patients",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/patients/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"patients",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get all patients",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/v1/patients/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"patients",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 31 Jan 2024 12:28:36 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": \"985ea836-44d5-4e00-828c-bb27059f286d\",\n        \"name\": \"Mrs. Akh Injaam\",\n        \"mobileno\": \"+989123456789\"\n    }\n]"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Appointment",
+			"item": [
+				{
+					"name": "schedule appointments",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"startTime\": \"10:00\",\n    \"endTime\": \"14:40\",\n    \"date\": \"2024-01-31\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/appointments/schedule/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"appointments",
+								"schedule",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "schedule appointments",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"startTime\": \"10:00\",\n    \"endTime\": \"14:40\",\n    \"date\": \"2024-01-31\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/v1/appointments/schedule/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"appointments",
+										"schedule",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 31 Jan 2024 12:29:39 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": \"46d78341-f6f0-4a5d-9e37-875753c19dc2\",\n        \"date\": \"2024-01-31\",\n        \"commenceTime\": \"10:00\",\n        \"length\": 30,\n        \"patient\": null,\n        \"status\": \"APPOINTMENT_STATUS_OPEN\"\n    },\n    {\n        \"id\": \"bbdefe63-c907-4829-bdcc-1571e79970fe\",\n        \"date\": \"2024-01-31\",\n        \"commenceTime\": \"10:30\",\n        \"length\": 30,\n        \"patient\": null,\n        \"status\": \"APPOINTMENT_STATUS_OPEN\"\n    },\n    {\n        \"id\": \"29fdd28f-1a91-4665-bcf4-5ace7247f7c3\",\n        \"date\": \"2024-01-31\",\n        \"commenceTime\": \"11:00\",\n        \"length\": 30,\n        \"patient\": null,\n        \"status\": \"APPOINTMENT_STATUS_OPEN\"\n    },\n    {\n        \"id\": \"6d706122-b9cc-4b48-a0d4-d1038555b1cb\",\n        \"date\": \"2024-01-31\",\n        \"commenceTime\": \"11:30\",\n        \"length\": 30,\n        \"patient\": null,\n        \"status\": \"APPOINTMENT_STATUS_OPEN\"\n    },\n    {\n        \"id\": \"012a19d7-395a-4f86-b293-10acedb737f9\",\n        \"date\": \"2024-01-31\",\n        \"commenceTime\": \"12:00\",\n        \"length\": 30,\n        \"patient\": null,\n        \"status\": \"APPOINTMENT_STATUS_OPEN\"\n    },\n    {\n        \"id\": \"7b866573-ffc9-4aa8-ab6f-d78135ab2940\",\n        \"date\": \"2024-01-31\",\n        \"commenceTime\": \"12:30\",\n        \"length\": 30,\n        \"patient\": null,\n        \"status\": \"APPOINTMENT_STATUS_OPEN\"\n    },\n    {\n        \"id\": \"4e53de00-e105-4c9d-8bd7-99e3d4157b52\",\n        \"date\": \"2024-01-31\",\n        \"commenceTime\": \"13:00\",\n        \"length\": 30,\n        \"patient\": null,\n        \"status\": \"APPOINTMENT_STATUS_OPEN\"\n    },\n    {\n        \"id\": \"64323de4-6315-474a-af5a-e1e458686e8b\",\n        \"date\": \"2024-01-31\",\n        \"commenceTime\": \"13:30\",\n        \"length\": 30,\n        \"patient\": null,\n        \"status\": \"APPOINTMENT_STATUS_OPEN\"\n    },\n    {\n        \"id\": \"d882cff6-c3c0-4bfc-a6c2-52735f731920\",\n        \"date\": \"2024-01-31\",\n        \"commenceTime\": \"14:00\",\n        \"length\": 30,\n        \"patient\": null,\n        \"status\": \"APPOINTMENT_STATUS_OPEN\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "get appointment by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/appointments/bbdefe63-c907-4829-bdcc-1571e79970fe/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"appointments",
+								"bbdefe63-c907-4829-bdcc-1571e79970fe",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get appointment by id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/v1/appointments/bbdefe63-c907-4829-bdcc-1571e79970fe/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"appointments",
+										"bbdefe63-c907-4829-bdcc-1571e79970fe",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 31 Jan 2024 12:30:33 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"bbdefe63-c907-4829-bdcc-1571e79970fe\",\n    \"date\": \"2024-01-31\",\n    \"commenceTime\": \"10:30\",\n    \"length\": 30,\n    \"patient\": null,\n    \"status\": \"APPOINTMENT_STATUS_OPEN\"\n}"
+						}
+					]
+				},
+				{
+					"name": "update appointment (reserve)",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"bbdefe63-c907-4829-bdcc-1571e79970fe\",\n    \"date\": \"2024-01-30\",\n    \"commenceTime\": \"12:00\",\n    \"length\": 30,\n    \"patient\": {\n        \"id\": \"985ea836-44d5-4e00-828c-bb27059f286d\",\n        \"name\": \"Mrs. Akh Injaam\",\n        \"mobileno\": \"+989123456789\"\n    },\n    \"status\": \"APPOINTMENT_STATUS_APPOINTING\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/appointments/bbdefe63-c907-4829-bdcc-1571e79970fe/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"appointments",
+								"bbdefe63-c907-4829-bdcc-1571e79970fe",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "update appointment (reserve)",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\": \"bbdefe63-c907-4829-bdcc-1571e79970fe\",\n    \"date\": \"2024-01-30\",\n    \"commenceTime\": \"12:00\",\n    \"length\": 30,\n    \"patient\": {\n        \"id\": \"985ea836-44d5-4e00-828c-bb27059f286d\",\n        \"name\": \"Mrs. Akh Injaam\",\n        \"mobileno\": \"+989123456789\"\n    },\n    \"status\": \"APPOINTMENT_STATUS_APPOINTING\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/v1/appointments/bbdefe63-c907-4829-bdcc-1571e79970fe/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"appointments",
+										"bbdefe63-c907-4829-bdcc-1571e79970fe",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 31 Jan 2024 12:32:21 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"bbdefe63-c907-4829-bdcc-1571e79970fe\",\n    \"date\": \"2024-01-30\",\n    \"commenceTime\": \"12:00\",\n    \"length\": 30,\n    \"patient\": {\n        \"id\": \"985ea836-44d5-4e00-828c-bb27059f286d\",\n        \"name\": \"Mrs. Akh Injaam\",\n        \"mobileno\": \"+989123456789\"\n    },\n    \"status\": \"APPOINTMENT_STATUS_APPOINTING\"\n}"
+						}
+					]
+				},
+				{
+					"name": "get all appointments",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/appointments/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"appointments",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get all appointments",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/v1/appointments/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"appointments",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 31 Jan 2024 12:33:05 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": \"46d78341-f6f0-4a5d-9e37-875753c19dc2\",\n        \"date\": \"2024-01-31\",\n        \"commenceTime\": \"10:00\",\n        \"length\": 30,\n        \"patient\": null,\n        \"status\": \"APPOINTMENT_STATUS_OPEN\"\n    },\n    {\n        \"id\": \"bbdefe63-c907-4829-bdcc-1571e79970fe\",\n        \"date\": \"2024-01-30\",\n        \"commenceTime\": \"12:00\",\n        \"length\": 30,\n        \"patient\": {\n            \"id\": \"985ea836-44d5-4e00-828c-bb27059f286d\",\n            \"name\": \"Mrs. Akh Injaam\",\n            \"mobileno\": \"+989123456789\"\n        },\n        \"status\": \"APPOINTMENT_STATUS_APPOINTING\"\n    },\n    {\n        \"id\": \"29fdd28f-1a91-4665-bcf4-5ace7247f7c3\",\n        \"date\": \"2024-01-31\",\n        \"commenceTime\": \"11:00\",\n        \"length\": 30,\n        \"patient\": null,\n        \"status\": \"APPOINTMENT_STATUS_OPEN\"\n    },\n    {\n        \"id\": \"6d706122-b9cc-4b48-a0d4-d1038555b1cb\",\n        \"date\": \"2024-01-31\",\n        \"commenceTime\": \"11:30\",\n        \"length\": 30,\n        \"patient\": null,\n        \"status\": \"APPOINTMENT_STATUS_OPEN\"\n    },\n    {\n        \"id\": \"012a19d7-395a-4f86-b293-10acedb737f9\",\n        \"date\": \"2024-01-31\",\n        \"commenceTime\": \"12:00\",\n        \"length\": 30,\n        \"patient\": null,\n        \"status\": \"APPOINTMENT_STATUS_OPEN\"\n    },\n    {\n        \"id\": \"7b866573-ffc9-4aa8-ab6f-d78135ab2940\",\n        \"date\": \"2024-01-31\",\n        \"commenceTime\": \"12:30\",\n        \"length\": 30,\n        \"patient\": null,\n        \"status\": \"APPOINTMENT_STATUS_OPEN\"\n    },\n    {\n        \"id\": \"4e53de00-e105-4c9d-8bd7-99e3d4157b52\",\n        \"date\": \"2024-01-31\",\n        \"commenceTime\": \"13:00\",\n        \"length\": 30,\n        \"patient\": null,\n        \"status\": \"APPOINTMENT_STATUS_OPEN\"\n    },\n    {\n        \"id\": \"64323de4-6315-474a-af5a-e1e458686e8b\",\n        \"date\": \"2024-01-31\",\n        \"commenceTime\": \"13:30\",\n        \"length\": 30,\n        \"patient\": null,\n        \"status\": \"APPOINTMENT_STATUS_OPEN\"\n    },\n    {\n        \"id\": \"d882cff6-c3c0-4bfc-a6c2-52735f731920\",\n        \"date\": \"2024-01-31\",\n        \"commenceTime\": \"14:00\",\n        \"length\": 30,\n        \"patient\": null,\n        \"status\": \"APPOINTMENT_STATUS_OPEN\"\n    },\n    {\n        \"id\": \"a9a7fa5c-e85f-4916-b92b-992be2ea34f8\",\n        \"date\": \"2024-01-31\",\n        \"commenceTime\": \"10:00\",\n        \"length\": 30,\n        \"patient\": null,\n        \"status\": \"APPOINTMENT_STATUS_OPEN\"\n    },\n    {\n        \"id\": \"831ff920-894f-4595-a034-766d69eada3f\",\n        \"date\": \"2024-01-31\",\n        \"commenceTime\": \"10:30\",\n        \"length\": 30,\n        \"patient\": null,\n        \"status\": \"APPOINTMENT_STATUS_OPEN\"\n    },\n    {\n        \"id\": \"77a416e0-7e20-481f-96d8-ab8999089104\",\n        \"date\": \"2024-01-31\",\n        \"commenceTime\": \"11:00\",\n        \"length\": 30,\n        \"patient\": null,\n        \"status\": \"APPOINTMENT_STATUS_OPEN\"\n    },\n    {\n        \"id\": \"1bc615a1-7627-48db-b666-9702ef22ca9b\",\n        \"date\": \"2024-01-31\",\n        \"commenceTime\": \"11:30\",\n        \"length\": 30,\n        \"patient\": null,\n        \"status\": \"APPOINTMENT_STATUS_OPEN\"\n    },\n    {\n        \"id\": \"57ebcb95-7e75-49f7-9db7-5c309e37516a\",\n        \"date\": \"2024-01-31\",\n        \"commenceTime\": \"12:00\",\n        \"length\": 30,\n        \"patient\": null,\n        \"status\": \"APPOINTMENT_STATUS_OPEN\"\n    },\n    {\n        \"id\": \"2a25c68f-1702-48e1-8b47-3b485945b356\",\n        \"date\": \"2024-01-31\",\n        \"commenceTime\": \"12:30\",\n        \"length\": 30,\n        \"patient\": null,\n        \"status\": \"APPOINTMENT_STATUS_OPEN\"\n    },\n    {\n        \"id\": \"c667453c-43ea-4502-9821-c3a77925e8a5\",\n        \"date\": \"2024-01-31\",\n        \"commenceTime\": \"13:00\",\n        \"length\": 30,\n        \"patient\": null,\n        \"status\": \"APPOINTMENT_STATUS_OPEN\"\n    },\n    {\n        \"id\": \"b2578dce-ef65-48e3-bc71-92fd95328169\",\n        \"date\": \"2024-01-31\",\n        \"commenceTime\": \"13:30\",\n        \"length\": 30,\n        \"patient\": null,\n        \"status\": \"APPOINTMENT_STATUS_OPEN\"\n    },\n    {\n        \"id\": \"883ebd40-e807-4179-ac15-d2b23526434d\",\n        \"date\": \"2024-01-31\",\n        \"commenceTime\": \"14:00\",\n        \"length\": 30,\n        \"patient\": null,\n        \"status\": \"APPOINTMENT_STATUS_OPEN\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "get appointments by status",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/appointments/2024-01-31/APPOINTMENT_STATUS_OPEN/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"appointments",
+								"2024-01-31",
+								"APPOINTMENT_STATUS_OPEN",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get appointments by status",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/v1/appointments/2024-01-31/APPOINTMENT_STATUS_OPEN/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"appointments",
+										"2024-01-31",
+										"APPOINTMENT_STATUS_OPEN",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 31 Jan 2024 12:33:48 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": \"46d78341-f6f0-4a5d-9e37-875753c19dc2\",\n        \"date\": \"2024-01-31\",\n        \"commenceTime\": \"10:00\",\n        \"length\": 30,\n        \"patient\": null,\n        \"status\": \"APPOINTMENT_STATUS_OPEN\"\n    },\n    {\n        \"id\": \"29fdd28f-1a91-4665-bcf4-5ace7247f7c3\",\n        \"date\": \"2024-01-31\",\n        \"commenceTime\": \"11:00\",\n        \"length\": 30,\n        \"patient\": null,\n        \"status\": \"APPOINTMENT_STATUS_OPEN\"\n    },\n    {\n        \"id\": \"6d706122-b9cc-4b48-a0d4-d1038555b1cb\",\n        \"date\": \"2024-01-31\",\n        \"commenceTime\": \"11:30\",\n        \"length\": 30,\n        \"patient\": null,\n        \"status\": \"APPOINTMENT_STATUS_OPEN\"\n    },\n    {\n        \"id\": \"012a19d7-395a-4f86-b293-10acedb737f9\",\n        \"date\": \"2024-01-31\",\n        \"commenceTime\": \"12:00\",\n        \"length\": 30,\n        \"patient\": null,\n        \"status\": \"APPOINTMENT_STATUS_OPEN\"\n    },\n    {\n        \"id\": \"7b866573-ffc9-4aa8-ab6f-d78135ab2940\",\n        \"date\": \"2024-01-31\",\n        \"commenceTime\": \"12:30\",\n        \"length\": 30,\n        \"patient\": null,\n        \"status\": \"APPOINTMENT_STATUS_OPEN\"\n    },\n    {\n        \"id\": \"4e53de00-e105-4c9d-8bd7-99e3d4157b52\",\n        \"date\": \"2024-01-31\",\n        \"commenceTime\": \"13:00\",\n        \"length\": 30,\n        \"patient\": null,\n        \"status\": \"APPOINTMENT_STATUS_OPEN\"\n    },\n    {\n        \"id\": \"64323de4-6315-474a-af5a-e1e458686e8b\",\n        \"date\": \"2024-01-31\",\n        \"commenceTime\": \"13:30\",\n        \"length\": 30,\n        \"patient\": null,\n        \"status\": \"APPOINTMENT_STATUS_OPEN\"\n    },\n    {\n        \"id\": \"d882cff6-c3c0-4bfc-a6c2-52735f731920\",\n        \"date\": \"2024-01-31\",\n        \"commenceTime\": \"14:00\",\n        \"length\": 30,\n        \"patient\": null,\n        \"status\": \"APPOINTMENT_STATUS_OPEN\"\n    },\n    {\n        \"id\": \"a9a7fa5c-e85f-4916-b92b-992be2ea34f8\",\n        \"date\": \"2024-01-31\",\n        \"commenceTime\": \"10:00\",\n        \"length\": 30,\n        \"patient\": null,\n        \"status\": \"APPOINTMENT_STATUS_OPEN\"\n    },\n    {\n        \"id\": \"831ff920-894f-4595-a034-766d69eada3f\",\n        \"date\": \"2024-01-31\",\n        \"commenceTime\": \"10:30\",\n        \"length\": 30,\n        \"patient\": null,\n        \"status\": \"APPOINTMENT_STATUS_OPEN\"\n    },\n    {\n        \"id\": \"77a416e0-7e20-481f-96d8-ab8999089104\",\n        \"date\": \"2024-01-31\",\n        \"commenceTime\": \"11:00\",\n        \"length\": 30,\n        \"patient\": null,\n        \"status\": \"APPOINTMENT_STATUS_OPEN\"\n    },\n    {\n        \"id\": \"1bc615a1-7627-48db-b666-9702ef22ca9b\",\n        \"date\": \"2024-01-31\",\n        \"commenceTime\": \"11:30\",\n        \"length\": 30,\n        \"patient\": null,\n        \"status\": \"APPOINTMENT_STATUS_OPEN\"\n    },\n    {\n        \"id\": \"57ebcb95-7e75-49f7-9db7-5c309e37516a\",\n        \"date\": \"2024-01-31\",\n        \"commenceTime\": \"12:00\",\n        \"length\": 30,\n        \"patient\": null,\n        \"status\": \"APPOINTMENT_STATUS_OPEN\"\n    },\n    {\n        \"id\": \"2a25c68f-1702-48e1-8b47-3b485945b356\",\n        \"date\": \"2024-01-31\",\n        \"commenceTime\": \"12:30\",\n        \"length\": 30,\n        \"patient\": null,\n        \"status\": \"APPOINTMENT_STATUS_OPEN\"\n    },\n    {\n        \"id\": \"c667453c-43ea-4502-9821-c3a77925e8a5\",\n        \"date\": \"2024-01-31\",\n        \"commenceTime\": \"13:00\",\n        \"length\": 30,\n        \"patient\": null,\n        \"status\": \"APPOINTMENT_STATUS_OPEN\"\n    },\n    {\n        \"id\": \"b2578dce-ef65-48e3-bc71-92fd95328169\",\n        \"date\": \"2024-01-31\",\n        \"commenceTime\": \"13:30\",\n        \"length\": 30,\n        \"patient\": null,\n        \"status\": \"APPOINTMENT_STATUS_OPEN\"\n    },\n    {\n        \"id\": \"883ebd40-e807-4179-ac15-d2b23526434d\",\n        \"date\": \"2024-01-31\",\n        \"commenceTime\": \"14:00\",\n        \"length\": 30,\n        \"patient\": null,\n        \"status\": \"APPOINTMENT_STATUS_OPEN\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "get appointments by date and start and end time",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/appointments/2024-01-31/11:00/13:00/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"appointments",
+								"2024-01-31",
+								"11:00",
+								"13:00",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get appointments by date and start and end time",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/v1/appointments/2024-01-31/11:00/13:00/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"appointments",
+										"2024-01-31",
+										"11:00",
+										"13:00",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 31 Jan 2024 12:34:35 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": \"6d706122-b9cc-4b48-a0d4-d1038555b1cb\",\n        \"date\": \"2024-01-31\",\n        \"commenceTime\": \"11:30\",\n        \"length\": 30,\n        \"patient\": null,\n        \"status\": \"APPOINTMENT_STATUS_OPEN\"\n    },\n    {\n        \"id\": \"012a19d7-395a-4f86-b293-10acedb737f9\",\n        \"date\": \"2024-01-31\",\n        \"commenceTime\": \"12:00\",\n        \"length\": 30,\n        \"patient\": null,\n        \"status\": \"APPOINTMENT_STATUS_OPEN\"\n    },\n    {\n        \"id\": \"7b866573-ffc9-4aa8-ab6f-d78135ab2940\",\n        \"date\": \"2024-01-31\",\n        \"commenceTime\": \"12:30\",\n        \"length\": 30,\n        \"patient\": null,\n        \"status\": \"APPOINTMENT_STATUS_OPEN\"\n    },\n    {\n        \"id\": \"4e53de00-e105-4c9d-8bd7-99e3d4157b52\",\n        \"date\": \"2024-01-31\",\n        \"commenceTime\": \"13:00\",\n        \"length\": 30,\n        \"patient\": null,\n        \"status\": \"APPOINTMENT_STATUS_OPEN\"\n    },\n    {\n        \"id\": \"1bc615a1-7627-48db-b666-9702ef22ca9b\",\n        \"date\": \"2024-01-31\",\n        \"commenceTime\": \"11:30\",\n        \"length\": 30,\n        \"patient\": null,\n        \"status\": \"APPOINTMENT_STATUS_OPEN\"\n    },\n    {\n        \"id\": \"57ebcb95-7e75-49f7-9db7-5c309e37516a\",\n        \"date\": \"2024-01-31\",\n        \"commenceTime\": \"12:00\",\n        \"length\": 30,\n        \"patient\": null,\n        \"status\": \"APPOINTMENT_STATUS_OPEN\"\n    },\n    {\n        \"id\": \"2a25c68f-1702-48e1-8b47-3b485945b356\",\n        \"date\": \"2024-01-31\",\n        \"commenceTime\": \"12:30\",\n        \"length\": 30,\n        \"patient\": null,\n        \"status\": \"APPOINTMENT_STATUS_OPEN\"\n    },\n    {\n        \"id\": \"c667453c-43ea-4502-9821-c3a77925e8a5\",\n        \"date\": \"2024-01-31\",\n        \"commenceTime\": \"13:00\",\n        \"length\": 30,\n        \"patient\": null,\n        \"status\": \"APPOINTMENT_STATUS_OPEN\"\n    }\n]"
+						}
+					]
+				}
+			]
+		}
+	]
+}
